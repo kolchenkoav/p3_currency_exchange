@@ -24,3 +24,8 @@ spring:
         hbm2ddl:
           auto: none
 
+currency:
+  api:
+    url: "https://cbr.ru/scripts/XML_daily.asp"
+    fallback-url: "https://www.cbr-xml-daily.ru/daily_utf8.xml"
+
