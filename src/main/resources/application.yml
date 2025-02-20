@@ -6,13 +6,14 @@ spring:
     enabled: true
     drop-first: false
     default-schema: public
-    change-log: classpath:db/changelog_init.xml
+    change-log: classpath:db/changelog/db.changelog-master.xml
 
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: postgres
+
   jpa:
     hibernate:
       ddl-auto: validate
