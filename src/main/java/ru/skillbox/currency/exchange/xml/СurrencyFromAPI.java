@@ -8,7 +8,7 @@ import lombok.Setter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
-public class Valute {
+public class СurrencyFromAPI {
     @XmlAttribute(name = "ID")
     private String id;
 

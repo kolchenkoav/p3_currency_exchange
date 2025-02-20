@@ -41,8 +41,8 @@ class CurrencyServiceTest {
         currencyDto = new CurrencyDto(1L, "USD", 1L, 93.5224, 840L, "USD");
     }
 
-    @Test
     @DisplayName("Get Currency by ID - Success")
+    @Test
     void getById_Success() {
         when(repository.findById(1L)).thenReturn(Optional.of(currency));
         when(mapper.convertToDto(currency)).thenReturn(currencyDto);
@@ -55,8 +55,8 @@ class CurrencyServiceTest {
         verify(mapper).convertToDto(currency);
     }
 
-    @Test
     @DisplayName("Get Currency by ID - Not Found")
+    @Test
     void getById_NotFound() {
         when(repository.findById(1L)).thenReturn(Optional.empty());
 
@@ -65,8 +65,8 @@ class CurrencyServiceTest {
         verify(repository).findById(1L);
     }
 
-    @Test
     @DisplayName("Convert Currency Value - Success")
+    @Test
     void convertValue_Success() {
         when(repository.findByIsoNumCode(840L)).thenReturn(currency);
 
@@ -76,8 +76,8 @@ class CurrencyServiceTest {
         verify(repository).findByIsoNumCode(840L);
     }
 
-    @Test
     @DisplayName("Create Currency - Success")
+    @Test
     void create_Success() {
         when(mapper.convertToEntity(currencyDto)).thenReturn(currency);
         when(repository.save(currency)).thenReturn(currency);
@@ -92,8 +92,8 @@ class CurrencyServiceTest {
         verify(mapper).convertToDto(currency);
     }
 
-    @Test
     @DisplayName("Get All Currencies - Success")
+    @Test
     void getAllCurrencies_Success() {
         List<Currency> currencies = new ArrayList<>();
         currencies.add(currency);

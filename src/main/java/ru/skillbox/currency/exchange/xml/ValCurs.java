@@ -6,11 +6,17 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Класс, представляющий корневой элемент XML для курса валют.
+ */
 @XmlRootElement(name = "ValCurs")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
 public class ValCurs {
+    /**
+     * Список валют.
+     */
     @XmlElement(name = "Valute")
-    private List<Valute> valutes;
+    private List<СurrencyFromAPI> сurrencyFromAPIS;
 }

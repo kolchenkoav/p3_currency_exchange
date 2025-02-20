@@ -5,5 +5,8 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
 
+    <include file="db/changelog/create-sequence.xml"/>
+    <include file="db/changelog/create-currency-table.xml"/>
     <include file="db/changelog/2025/02/20-01-add-iso_letter_code.xml"/>
+    <include file="db/changelog/insert-currency.xml"/>
 </databaseChangeLog>
